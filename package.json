@@ -1,0 +1,7 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "Fetch some RSS source down",
+  "main": "main.js",
+  "private": true
+}
