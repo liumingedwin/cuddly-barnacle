@@ -34,6 +34,7 @@ jobs:
       run: |
          git config --local user.email "liumingedwin@qq.com"
          git config --local user.name "botiron"
+         echo git remote set-url --add oorigin https://${{ github.actor }}:${{ secrets.MY_GIT_TOKEN }}@github.com/${{ github.repository }}
          git remote set-url --add oorigin https://${{ github.actor }}:${{ secrets.MY_GIT_TOKEN }}@github.com/${{ github.repository }}
          git checkout sync
          git pull
