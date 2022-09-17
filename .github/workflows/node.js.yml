@@ -26,4 +26,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm test
+    - run: node main.js
+    - name: Commit files
+      run: |
+         git config --local user.email "liumingedwin@qq.com"
+         git config --local user.name "botiron"
+         git pull
+         git add *.xml
+         git commit -m "Upload Sync"
