@@ -34,3 +34,8 @@ jobs:
          git pull
          git add *.xml
          git commit -m "Upload Sync"
+    - name: Push changes
+      uses:  ad-m/github-push-action@master
+      with:
+         github_token: ${{ secrets.MY_GIT_TOKEN }}
+         branch: sync
